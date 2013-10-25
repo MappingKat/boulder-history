@@ -15,17 +15,15 @@ body {
   font:normal 15px/20px Arial,sans-serif;
   background:#fff;
   }
-
 article {
-  width:33.3333%;
-  min-width:320px;
+  width:60%;
+  min-width:420px;
   position:relative;
-  padding-top:40px;
-  padding-bottom:33.3333%;
+  background:#fff;
+  padding-bottom:33%;
   }
 section {
-  padding:40px;
-  margin-left:40px;
+  padding:10px 10px;
   position:relative;
   transition:background 500ms, color 500ms;
   -moz-transition:background 500ms, color 500ms;
@@ -39,7 +37,7 @@ section a {
   text-shadow:rgba(64,64,64,1) 0px 0px 4px;
   }
 section.active {
-  background:#222;
+  background:#193fea;
   color:#eee;
   }
 section.active a { color:#eee; }
@@ -64,10 +62,10 @@ p { margin:0px; }
 .cover:before {
   content:'';
   display:block;
-  width:120px; height:120px;
-  margin:0px auto 20px;
+  width:400px; height:240px;
+  margin:0px 0px 20px 0px;
   }
-.cover.active:before { background:url(sprite.png) 0px -78px no-repeat; }
+.cover.active:before { background:url(flatirons.png) no-repeat; }
 
 #pane {
   position:fixed;
@@ -80,8 +78,8 @@ p { margin:0px; }
   position:absolute;
   top:0px;
   bottom:0px;
-  width:200%;
-  left:-50%;
+  width:100%;
+  right:-20%;
   transition:opacity 250ms;
   -moz-transition:opacity 250ms;
   -webkit-transition:opacity 250ms;
@@ -102,7 +100,7 @@ p { margin:0px; }
 .spot-kitchennextdoor.active,
 .spot-hoptoit.active,
 .spot-communitycycles.active,
-.spot-atlas.active { background:url(http://a.tiles.mapbox.com/v3/marker/pin-s+eeeeee@2x.png) no-repeat; }
+.spot-atlas.active { background:url(http://a.tiles.mapbox.com/v3/marker/pin-m+eeeeee@2x.png) no-repeat; }
 
 /* Distinguish the "cover page" visually other sections. */
 body.section-0 #map { opacity:0.5; }
@@ -159,7 +157,7 @@ body.section-0 #map { opacity:0.5; }
 	
 <script>
 var geojson = [
-  { "geometry": { "type": "Point", "coordinates": [-105.25000, 40.025000] },
+  { "geometry": { "type": "Point", "coordinates": [-105.27500, 40.020000] },
     "properties": { "id": "cover" } },
   { "geometry": { "type": "Point", "coordinates": [-105.2617746591568, 40.00761923353727] },
     "properties": { "id": "dlc" } },
@@ -221,9 +219,9 @@ var setActive = function(index, ease) {
 
   // Ease map to active marker.
   if (!ease) {
-    map.centerzoom(markers[index].location, markers[index].data.properties.zoom||13);
+    map.centerzoom(markers[index].location, markers[index].data.properties.zoom||14);
   } else {
-    map.ease.location(markers[index].location).zoom(markers[index].data.properties.zoom||13).optimal(0.5, 1.00);
+    map.ease.location(markers[index].location).zoom(markers[index].data.properties.zoom||14).optimal(0.1, 1.00);
   }
 
   return true;
