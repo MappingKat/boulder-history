@@ -14,7 +14,7 @@ article {
 section {
   padding:10px 10px;
   position:relative;
-  min-height:550px;
+  min-height:530px;
   transition:background 1000ms, color 1000ms;
   -moz-transition:background 1000ms, color 1000ms;
   -webkit-transition:background 1000ms, color 1000ms;
@@ -31,10 +31,10 @@ section.active {
   }
 section.active a { color:#444; }
 section.active small { color:#ccc; }
-h1 { font-size:2em; line-height:1em; }
+h1 { font-size:2em; line-height:1em; margin:0px 0px 10px; }
 h2 { font-size:1.3333em; }
-h1,h2 { margin:0px 0px 10px; }
-p { margin:0px; }
+h2 { margin:10px 0px; }
+p { margin:5px 0px; }
 
 .scroll {
   position:absolute;

@@ -61,7 +61,7 @@ var setActive = function(index, ease) {
 
   // Ease map to active marker.
   if (!ease) {
-    map.centerzoom(markers[index].location, markers[index].data.properties.zoom||14);
+    map.centerzoom(markers[index].location, markers[index].data.properties.zoom||13);
   } else {
     map.ease.location(markers[index].location).zoom(markers[index].data.properties.zoom||14).optimal(0.1, 1.00);
   }
