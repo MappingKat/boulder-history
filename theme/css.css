@@ -26,11 +26,11 @@ section a {
   }
 section.active {
   background:#eee;
-  color:#000;
-  opacity: .8;
+  color:#444;
+  opacity: .9;
   }
 section.active a { color:#444; }
-section.active small { color:#ccc; }
+section.active small { color:#ababab; }
 h1 { font-size:2em; line-height:1em; margin:0px 0px 10px; }
 h2 { font-size:1.3333em; }
 h2 { margin:10px 0px; }
